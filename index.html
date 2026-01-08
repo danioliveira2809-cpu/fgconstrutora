@@ -5,57 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FG Construtora LTDA | Obras Civis e Pré-Moldados</title>
   <meta name="description" content="FG Construtora LTDA especializada em obras civis e estruturas pré-moldadas. Qualidade, segurança e eficiência." />
+  
   <style>
+    /* 1. CONFIGURAÇÕES GERAIS (O "Fundo" do seu painel) */
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f172a;
+      background-color: #0f172a; /* Azul escuro igual ao Power BI 2026 */
       color: #e5e7eb;
     }
+
+    /* 2. CABEÇALHO (O Topo do site) */
     header {
       background: linear-gradient(135deg, #1e293b, #020617);
       padding: 60px 20px;
       text-align: center;
-    }
+    } 
+
     header h1 {
       font-size: 40px;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 18px;
       max-width: 800px;
       margin: auto;
     }
+
+    /* 3. SEÇÕES E CARTÕES (Como os seus visuais de extratos) */
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
+
     h2 {
       color: #93c5fd;
       margin-bottom: 20px;
       font-size: 32px;
     }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .card {
       background-color: #020617;
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
     }
+
+    .card:hover {
+      transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
+    }
+
     .card h3 {
       color: #60a5fa;
       margin-bottom: 10px;
     }
+
+    /* 4. ÁREA DE CONTATO (Botão WhatsApp) */
     .cta {
       background-color: #1e293b;
       text-align: center;
       padding: 60px 20px;
     }
+
     .cta a {
       background-color: #2563eb;
       color: white;
@@ -65,7 +85,10 @@
       border-radius: 8px;
       display: inline-block;
       margin-top: 20px;
+      font-weight: bold;
     }
+
+    /* 5. RODAPÉ */
     footer {
       background-color: #020617;
       text-align: center;
@@ -75,58 +98,290 @@
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>FG Construtora LTDA</h1>
-  <p>Especialistas em obras civis e estruturas pré-moldadas, entregando soluções seguras, eficientes e de alta qualidade.</p>
+  <header>
+    <header>
+  <img src="logo-fg.png" alt="FG Construtora" style="height: 100px; margin-bottom: 10px;">
+  <p>Especialistas em Pontes, Viadutos e Estruturas Pré-Moldadas.</p>
 </header>
+    <h1>FG Construtora LTDA</h1>
+    <p>Especialistas em obras civis e estruturas pré-moldadas, entregando soluções seguras, eficientes e de alta qualidade.</p>
+  </header>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FG Construtora LTDA | Obras Civis e Pré-Moldados</title>
+  <meta name="description" content="FG Construtora LTDA especializada em obras civis e estruturas pré-moldadas. Qualidade, segurança e eficiência." />
+  
+  <style>
+    /* 1. CONFIGURAÇÕES GERAIS (O "Fundo" do seu painel) */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f172a; /* Azul escuro igual ao Power BI 2026 */
+      color: #e5e7eb;
+    }
 
-<section>
-  <h2>Nossos Serviços</h2>
+    /* 2. CABEÇALHO (O Topo do site) */
+    header {
+      background: linear-gradient(135deg, #1e293b, #020617);
+      padding: 60px 20px;
+      text-align: center;
+    } 
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* 3. SEÇÕES E CARTÕES (Como os seus visuais de extratos) */
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #93c5fd;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #020617;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
+    }
+
+    .card h3 {
+      color: #60a5fa;
+      margin-bottom: 10px;
+    }
+
+    /* 4. ÁREA DE CONTATO (Botão WhatsApp) */
+    .cta {
+      background-color: #1e293b;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .cta a {
+      background-color: #2563eb;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    /* 5. RODAPÉ */
+    footer {
+      background-color: #020617;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <section id="portfolio">
+  <h2>Nosso Portfólio de Obras</h2>
   <div class="cards">
     <div class="card">
-      <h3>Obras Civis</h3>
-      <p>Execução de obras residenciais, comerciais e industriais com alto padrão técnico e cumprimento de prazos.</p>
+      <img src="ponte-finalizada.jpg" alt="Ponte Finalizada" style="width:100%; border-radius:8px;">
+      <h3>Ponte do Rio Sinimbu</h3>
+      <p>Projeto finalizado com guarda-corpo e infraestrutura completa.</p>
     </div>
+
     <div class="card">
+      <img src="ponte-obra.jpg" alt="Ponte em Construção" style="width:100%; border-radius:8px;">
+      <h3>Ponte Gramado Xavier</h3>
+      <p>Fase de montagem das vigas e preparação da laje superior.</p>
+    </div>
+    
+    <div class="card">
+      <img src="detalhe-vigas.jpg" alt="Detalhe das Vigas" style="width:100%; border-radius:8px;">
       <h3>Estruturas Pré-Moldadas</h3>
-      <p>Soluções em concreto pré-moldado que garantem rapidez, economia e segurança estrutural.</p>
-    </div>
-    <div class="card">
-      <h3>Reformas e Ampliações</h3>
-      <p>Modernização de espaços com planejamento, qualidade e mínima interferência operacional.</p>
+      <p>Detalhe técnico das vigas de sustentação em concreto armado.</p>
     </div>
   </div>
 </section>
-
-<section>
-  <h2>Por que escolher a FG Construtora?</h2>
+    <h1>FG Construtora LTDA</h1>
+    <p>Especialistas em obras civis e estruturas pré-moldadas, entregando soluções seguras, eficientes e de alta qualidade.</p>
+  </header>
+  <section id="portfolio">
+  <h2>Nosso Portfólio de Obras</h2>
   <div class="cards">
     <div class="card">
-      <h3>Experiência e Confiabilidade</h3>
-      <p>Equipe qualificada e comprometida com as normas técnicas e segurança do trabalho.</p>
+      <img src="ponte-finalizada.jpg" alt="Ponte Finalizada" style="width:100%; border-radius:8px;">
+      <h3>Ponte do Rio Sinimbu</h3>
+      <p>Projeto finalizado com guarda-corpo e infraestrutura completa.</p>
     </div>
+
     <div class="card">
-      <h3>Compromisso com o Prazo</h3>
-      <p>Planejamento eficiente para garantir entregas dentro do cronograma.</p>
+      <img src="ponte-obra.jpg" alt="Ponte em Construção" style="width:100%; border-radius:8px;">
+      <h3>Ponte Gramado Xavier</h3>
+      <p>Fase de montagem das vigas e preparação da laje superior.</p>
     </div>
+    
     <div class="card">
-      <h3>Atendimento Personalizado</h3>
-      <p>Cada projeto é tratado de forma única, conforme a necessidade do cliente.</p>
+      <img src="detalhe-vigas.jpg" alt="Detalhe das Vigas" style="width:100%; border-radius:8px;">
+      <h3>Estruturas Pré-Moldadas</h3>
+      <p>Detalhe técnico das vigas de sustentação em concreto armado.</p>
+    </div>
+  </div>
+</section> 
+  <section id="portfolio">
+  <h2>Nosso Portfólio de Obras</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="ponte-finalizada.jpg" alt="Ponte Finalizada" style="width:100%; border-radius:8px;">
+      <h3>Ponte do Rio Sinimbu</h3>
+      <p>Projeto finalizado com guarda-corpo e infraestrutura completa.</p>
+    </div>
+
+    <div class="card">
+      <img src="ponte-obra.jpg" alt="Ponte em Construção" style="width:100%; border-radius:8px;">
+      <h3>Ponte Gramado Xavier</h3>
+      <p>Fase de montagem das vigas e preparação da laje superior.</p>
+    </div>
+    
+    <div class="card">
+      <img src="detalhe-vigas.jpg" alt="Detalhe das Vigas" style="width:100%; border-radius:8px;">
+      <h3>Estruturas Pré-Moldadas</h3>
+      <p>Detalhe técnico das vigas de sustentação em concreto armado.</p>
     </div>
   </div>
 </section>
 
-<section class="cta">
-  <h2>Solicite um Orçamento</h2>
-  <p>Entre em contato conosco e transforme seu projeto em realidade.</p>
-  <a href="https://wa.me/555491868447" target="_blank">Falar no WhatsApp</a>
-  <p style="margin-top:20px;">📧 fgconstrutora25@gmail.com</p>
-</section>
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Obras Civis</h3>
+        <p>Execução de obras residenciais, comerciais e industriais com alto padrão técnico e cumprimento de prazos.</p>
+      </div>
+      <div class="card">
+        <h3>Estruturas Pré-Moldadas</h3>
+        <p>Soluções em concreto pré-moldado que garantem rapidez, economia e segurança estrutural.</p>
+      </div>
+      <div class="card">
+        <h3>Reformas e Ampliações</h3>
+        <p>Modernização de espaços com planejamento, qualidade e mínima interferência operacional.</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 FG Construtora LTDA • Obras Civis e Estruturas Pré-Moldadas</p>
+  <section id="sobre">
+    <h2>Por que escolher a FG?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Confiabilidade</h3>
+        <p>Equipe comprometida com as normas técnicas e segurança do trabalho.</p>
+      </div>
+      <div class="card">
+        <h3>Prazo Rigoroso</h3>
+        <p>Planejamento eficiente para garantir entregas dentro do cronograma.</p>
+      </div>
+      <div class="card">
+        <h3>Personalização</h3>
+        <p>Cada projeto é tratado de forma única para atender sua necessidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Solicite um Orçamento</h2>
+    <p>Transforme seu projeto em realidade com quem entende de construção.</p>
+    <a href="https://wa.me/555491868447" target="_blank">Falar no WhatsApp</a>
+    <p style="margin-top:20px;">📧 fgconstrutora25@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>© 2026 FG Construtora LTDA • Obras Civis e Estruturas Pré-Moldadas</p>
+  </footer>
+
+</body>
+</html>
+
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Obras Civis</h3>
+        <p>Execução de obras residenciais, comerciais e industriais com alto padrão técnico e cumprimento de prazos.</p>
+      </div>
+      <div class="card">
+        <h3>Estruturas Pré-Moldadas</h3>
+        <p>Soluções em concreto pré-moldado que garantem rapidez, economia e segurança estrutural.</p>
+      </div>
+      <div class="card">
+        <h3>Reformas e Ampliações</h3>
+        <p>Modernização de espaços com planejamento, qualidade e mínima interferência operacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>Por que escolher a FG?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Confiabilidade</h3>
+        <p>Equipe comprometida com as normas técnicas e segurança do trabalho.</p>
+      </div>
+      <div class="card">
+        <h3>Prazo Rigoroso</h3>
+        <p>Planejamento eficiente para garantir entregas dentro do cronograma.</p>
+      </div>
+      <div class="card">
+        <h3>Personalização</h3>
+        <p>Cada projeto é tratado de forma única para atender sua necessidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Solicite um Orçamento</h2>
+    <p>Transforme seu projeto em realidade com quem entende de construção.</p>
+    <a href="https://wa.me/555491868447" target="_blank">Falar no WhatsApp</a>
+    <p style="margin-top:20px;">📧 fgconstrutora25@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>© 2026 FG Construtora LTDA • Obras Civis e Estruturas Pré-Moldadas</p>
+  </footer>
+
+</body>
+</html>
 </footer>
 
 </body>
