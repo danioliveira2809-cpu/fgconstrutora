@@ -3,386 +3,202 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FG Construtora LTDA | Obras Civis e Pré-Moldados</title>
-  <meta name="description" content="FG Construtora LTDA especializada em obras civis e estruturas pré-moldadas. Qualidade, segurança e eficiência." />
-  
+  <title>FG Construtora | Pontes & Viadutos</title>
   <style>
-    /* 1. CONFIGURAÇÕES GERAIS (O "Fundo" do seu painel) */
+    /* 1. PALETA DE CORES BASEADA NA LOGO */
+    :root {
+      --azul-logo: #3a7caf; /* Tom extraído da sua logo */
+      --azul-escuro: #0f172a; /* Fundo do Power BI 2026 */
+      --branco-puro: #ffffff;
+      --cinza-claro: #f8fafc;
+      --sombra: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f172a; /* Azul escuro igual ao Power BI 2026 */
-      color: #e5e7eb;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--azul-escuro);
+      color: var(--cinza-claro);
+      line-height: 1.6;
     }
 
-    /* 2. CABEÇALHO (O Topo do site) */
+    /* 2. CABEÇALHO COM LINHA DE DESTAQUE */
     header {
-      background: linear-gradient(135deg, #1e293b, #020617);
-      padding: 60px 20px;
+      background: linear-gradient(135deg, #1e293b 0%, #020617 100%);
+      padding: 50px 20px;
       text-align: center;
-    } 
+      border-bottom: 4px solid var(--azul-logo); /* Linha de camada */
+      box-shadow: var(--sombra);
+    }
+
+    header img {
+      height: 120px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+    }
 
     header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin: 0;
+      color: var(--branco-puro);
+      letter-spacing: 1px;
     }
 
-    header p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    /* 3. SEÇÕES E CARTÕES (Como os seus visuais de extratos) */
+    /* 3. SEÇÕES COM SOMBRAS E BORDAS */
     section {
-      padding: 60px 20px;
-      max-width: 1100px;
+      padding: 80px 20px;
+      max-width: 1200px;
       margin: auto;
     }
 
     h2 {
-      color: #93c5fd;
-      margin-bottom: 20px;
+      text-align: center;
+      color: var(--azul-logo);
       font-size: 32px;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
     }
 
+    /* CAMADAS DE CARTÕES COM SOMBRA E BORDA LATERAL */
     .card {
-      background-color: #020617;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
+      background-color: #1e293b;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      transition: all 0.4s ease;
+      border-left: 5px solid var(--azul-logo); /* Linha de detalhe */
     }
 
     .card:hover {
-      transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(58, 124, 175, 0.4);
     }
 
-    .card h3 {
-      color: #60a5fa;
-      margin-bottom: 10px;
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
     }
 
-    /* 4. ÁREA DE CONTATO (Botão WhatsApp) */
-    .cta {
-      background-color: #1e293b;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .cta a {
-      background-color: #2563eb;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-
-    /* 5. RODAPÉ */
-    footer {
-      background-color: #020617;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
-      color: #9ca3af;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <header>
-  <img src="logo-fg.png" alt="FG Construtora" style="height: 100px; margin-bottom: 10px;">
-  <p>Especialistas em Pontes, Viadutos e Estruturas Pré-Moldadas.</p>
-</header>
-    <h1>FG Construtora LTDA</h1>
-    <p>Especialistas em obras civis e estruturas pré-moldadas, entregando soluções seguras, eficientes e de alta qualidade.</p>
-  </header>
-  <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FG Construtora LTDA | Obras Civis e Pré-Moldados</title>
-  <meta name="description" content="FG Construtora LTDA especializada em obras civis e estruturas pré-moldadas. Qualidade, segurança e eficiência." />
-  
-  <style>
-    /* 1. CONFIGURAÇÕES GERAIS (O "Fundo" do seu painel) */
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f172a; /* Azul escuro igual ao Power BI 2026 */
-      color: #e5e7eb;
-    }
-
-    /* 2. CABEÇALHO (O Topo do site) */
-    header {
-      background: linear-gradient(135deg, #1e293b, #020617);
-      padding: 60px 20px;
-      text-align: center;
-    } 
-
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    /* 3. SEÇÕES E CARTÕES (Como os seus visuais de extratos) */
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #93c5fd;
-      margin-bottom: 20px;
-      font-size: 32px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background-color: #020617;
+    .card-content {
       padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
     }
 
     .card h3 {
-      color: #60a5fa;
-      margin-bottom: 10px;
+      color: var(--azul-logo);
+      margin-top: 0;
     }
 
-    /* 4. ÁREA DE CONTATO (Botão WhatsApp) */
+    /* 4. ÁREA DE CHAMADA (CTA) */
     .cta {
-      background-color: #1e293b;
+      background-color: var(--azul-logo);
+      color: white;
       text-align: center;
-      padding: 60px 20px;
+      border-radius: 20px;
+      margin: 40px auto;
+      box-shadow: var(--sombra);
     }
+
+    .cta h2 { color: white; }
 
     .cta a {
-      background-color: #2563eb;
-      color: white;
-      padding: 15px 30px;
+      background-color: var(--branco-puro);
+      color: var(--azul-logo);
+      padding: 18px 40px;
       text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 20px;
       font-weight: bold;
+      border-radius: 50px;
+      display: inline-block;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    /* 5. RODAPÉ */
+    .cta a:hover {
+      background-color: var(--azul-escuro);
+      color: white;
+      transform: scale(1.05);
+    }
+
     footer {
       background-color: #020617;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
-      color: #9ca3af;
+      padding: 40px;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <section id="portfolio">
-  <h2>Nosso Portfólio de Obras</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="ponte-finalizada.jpg" alt="Ponte Finalizada" style="width:100%; border-radius:8px;">
-      <h3>Ponte do Rio Sinimbu</h3>
-      <p>Projeto finalizado com guarda-corpo e infraestrutura completa.</p>
-    </div>
-
-    <div class="card">
-      <img src="ponte-obra.jpg" alt="Ponte em Construção" style="width:100%; border-radius:8px;">
-      <h3>Ponte Gramado Xavier</h3>
-      <p>Fase de montagem das vigas e preparação da laje superior.</p>
-    </div>
-    
-    <div class="card">
-      <img src="detalhe-vigas.jpg" alt="Detalhe das Vigas" style="width:100%; border-radius:8px;">
-      <h3>Estruturas Pré-Moldadas</h3>
-      <p>Detalhe técnico das vigas de sustentação em concreto armado.</p>
-    </div>
-  </div>
-</section>
-    <h1>FG Construtora LTDA</h1>
-    <p>Especialistas em obras civis e estruturas pré-moldadas, entregando soluções seguras, eficientes e de alta qualidade.</p>
+    <img src="logo-fg.png" alt="Logo FG Construtora">
+    <h1>PONTES & VIADUTOS</h1>
+    <p>Engenharia de precisão em obras civis e estruturas pré-moldadas.</p>
   </header>
-  <section id="portfolio">
-  <h2>Nosso Portfólio de Obras</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="ponte-finalizada.jpg" alt="Ponte Finalizada" style="width:100%; border-radius:8px;">
-      <h3>Ponte do Rio Sinimbu</h3>
-      <p>Projeto finalizado com guarda-corpo e infraestrutura completa.</p>
-    </div>
 
-    <div class="card">
-      <img src="ponte-obra.jpg" alt="Ponte em Construção" style="width:100%; border-radius:8px;">
-      <h3>Ponte Gramado Xavier</h3>
-      <p>Fase de montagem das vigas e preparação da laje superior.</p>
-    </div>
-    
-    <div class="card">
-      <img src="detalhe-vigas.jpg" alt="Detalhe das Vigas" style="width:100%; border-radius:8px;">
-      <h3>Estruturas Pré-Moldadas</h3>
-      <p>Detalhe técnico das vigas de sustentação em concreto armado.</p>
-    </div>
-  </div>
-</section> 
   <section id="portfolio">
-  <h2>Nosso Portfólio de Obras</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="ponte-finalizada.jpg" alt="Ponte Finalizada" style="width:100%; border-radius:8px;">
-      <h3>Ponte do Rio Sinimbu</h3>
-      <p>Projeto finalizado com guarda-corpo e infraestrutura completa.</p>
+    <h2>Portfólio de Obras</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="ponte-finalizada.jpg" alt="Ponte Sinimbu">
+        <div class="card-content">
+          <h3>Ponte do Rio Sinimbu</h3>
+          <p>Projeto executado com infraestrutura completa e acabamento de alto padrão técnico.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="ponte-obra.jpg" alt="Ponte Gramado Xavier">
+        <div class="card-content">
+          <h3>Ponte Gramado Xavier</h3>
+          <p>Montagem técnica de vigas pré-moldadas garantindo rapidez e segurança estrutural.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="detalhe-vigas.jpg" alt="Estruturas">
+        <div class="card-content">
+          <h3>Pré-Moldados</h3>
+          <p>Fabricação e montagem de elementos em concreto armado para grandes vãos.</p>
+        </div>
+      </div>
     </div>
-
-    <div class="card">
-      <img src="ponte-obra.jpg" alt="Ponte em Construção" style="width:100%; border-radius:8px;">
-      <h3>Ponte Gramado Xavier</h3>
-      <p>Fase de montagem das vigas e preparação da laje superior.</p>
-    </div>
-    
-    <div class="card">
-      <img src="detalhe-vigas.jpg" alt="Detalhe das Vigas" style="width:100%; border-radius:8px;">
-      <h3>Estruturas Pré-Moldadas</h3>
-      <p>Detalhe técnico das vigas de sustentação em concreto armado.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="servicos">
     <h2>Nossos Serviços</h2>
     <div class="cards">
       <div class="card">
-        <h3>Obras Civis</h3>
-        <p>Execução de obras residenciais, comerciais e industriais com alto padrão técnico e cumprimento de prazos.</p>
+        <div class="card-content">
+          <h3>Obras Civis</h3>
+          <p>Gestão completa de canteiros para obras industriais e infraestrutura urbana.</p>
+        </div>
       </div>
       <div class="card">
-        <h3>Estruturas Pré-Moldadas</h3>
-        <p>Soluções em concreto pré-moldado que garantem rapidez, economia e segurança estrutural.</p>
-      </div>
-      <div class="card">
-        <h3>Reformas e Ampliações</h3>
-        <p>Modernização de espaços com planejamento, qualidade e mínima interferência operacional.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre">
-    <h2>Por que escolher a FG?</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Confiabilidade</h3>
-        <p>Equipe comprometida com as normas técnicas e segurança do trabalho.</p>
-      </div>
-      <div class="card">
-        <h3>Prazo Rigoroso</h3>
-        <p>Planejamento eficiente para garantir entregas dentro do cronograma.</p>
-      </div>
-      <div class="card">
-        <h3>Personalização</h3>
-        <p>Cada projeto é tratado de forma única para atender sua necessidade.</p>
+        <div class="card-content">
+          <h3>Reformas e Ampliações</h3>
+          <p>Planejamento para modernização de estruturas existentes com mínima interferência.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="cta">
-    <h2>Solicite um Orçamento</h2>
-    <p>Transforme seu projeto em realidade com quem entende de construção.</p>
-    <a href="https://wa.me/555491868447" target="_blank">Falar no WhatsApp</a>
+    <h2>Fale com nossos Engenheiros</h2>
+    <p>Transforme seu projeto em uma estrutura sólida e duradoura.</p>
+    <a href="https://wa.me/555491868447" target="_blank">ENVIAR PROJETO NO WHATSAPP</a>
     <p style="margin-top:20px;">📧 fgconstrutora25@gmail.com</p>
   </section>
 
   <footer>
-    <p>© 2026 FG Construtora LTDA • Obras Civis e Estruturas Pré-Moldadas</p>
+    <p>© 2026 FG Construtora LTDA • Pontes & Viadutos</p>
   </footer>
-
-</body>
-</html>
-
-  <section id="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Obras Civis</h3>
-        <p>Execução de obras residenciais, comerciais e industriais com alto padrão técnico e cumprimento de prazos.</p>
-      </div>
-      <div class="card">
-        <h3>Estruturas Pré-Moldadas</h3>
-        <p>Soluções em concreto pré-moldado que garantem rapidez, economia e segurança estrutural.</p>
-      </div>
-      <div class="card">
-        <h3>Reformas e Ampliações</h3>
-        <p>Modernização de espaços com planejamento, qualidade e mínima interferência operacional.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre">
-    <h2>Por que escolher a FG?</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Confiabilidade</h3>
-        <p>Equipe comprometida com as normas técnicas e segurança do trabalho.</p>
-      </div>
-      <div class="card">
-        <h3>Prazo Rigoroso</h3>
-        <p>Planejamento eficiente para garantir entregas dentro do cronograma.</p>
-      </div>
-      <div class="card">
-        <h3>Personalização</h3>
-        <p>Cada projeto é tratado de forma única para atender sua necessidade.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>Solicite um Orçamento</h2>
-    <p>Transforme seu projeto em realidade com quem entende de construção.</p>
-    <a href="https://wa.me/555491868447" target="_blank">Falar no WhatsApp</a>
-    <p style="margin-top:20px;">📧 fgconstrutora25@gmail.com</p>
-  </section>
-
-  <footer>
-    <p>© 2026 FG Construtora LTDA • Obras Civis e Estruturas Pré-Moldadas</p>
-  </footer>
-
-</body>
-</html>
-</footer>
 
 </body>
 </html>
