@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FG Construtora | Engenharia de Obras de Arte</title>
+
   <style>
     :root {
-      --azul-fg: #3a7caf; /* O azul da sua logo */
+      --azul-fg: #3a7caf;
       --azul-escuro: #0a192f;
       --branco: #ffffff;
     }
@@ -14,35 +15,32 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* Fundo solicitado: Branco que muda para o azul da logo */
-      background: linear-gradient(180deg, var(--branco) 0%, #eef2f3 50%, var(--azul-fg) 100%);
+      background: linear-gradient(
+        180deg,
+        var(--branco) 0%,
+        #eef2f3 50%,
+        var(--azul-fg) 100%
+      );
       background-attachment: fixed;
       color: #333;
     }
 
+    /* HEADER CORRIGIDO */
     header {
-      header {
       text-align: center;
       padding: 50px 20px;
     }
 
-    .logo-img { height: 90px; margin-bottom: 15px; }
-    
-    .logo-principal { height: 100px; margin-bottom: 20px; }
-
-    /* Imagem do Engenheiro (Pessoa Profissional) */
-    .engenheiro-topo {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 20px;
-      display: block;
-      border-radius: 50%;
-      border: 5px solid var(--azul-fg);
-      object-fit: cover;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    .logo-img {
+      height: 90px;
+      margin-bottom: 15px;
     }
 
-    .container { max-width: 1000px; margin: auto; padding: 20px; }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
 
     .card-principal {
       background: white;
@@ -52,7 +50,11 @@
       margin-top: -40px;
     }
 
-    h1, h2 { color: var(--azul-escuro); text-transform: uppercase; text-align: center; }
+    h1, h2 {
+      color: var(--azul-escuro);
+      text-transform: uppercase;
+      text-align: center;
+    }
 
     .texto-historia {
       line-height: 1.8;
@@ -61,7 +63,6 @@
       color: #555;
     }
 
-    /* Estilo do Mapa Interativo */
     .mapa-container {
       margin: 40px 0;
       border-radius: 15px;
@@ -71,10 +72,9 @@
       transition: transform 0.4s ease;
     }
 
-    /* Efeito de interação no mapa */
     .mapa-container:hover {
       transform: scale(1.02);
-      box-shadow: 0 12px 30px rgba(58, 124, 175, 0.3);
+      box-shadow: 0 12px 30px rgba(58,124,175,0.3);
     }
 
     .grid-obras {
@@ -91,10 +91,19 @@
       border-bottom: 4px solid var(--azul-fg);
     }
 
-    .obra-item img { width: 100%; height: 200px; object-fit: cover; }
-    .obra-item h3 { padding: 10px; text-align: center; font-size: 1em; color: var(--azul-escuro); }
+    .obra-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
 
-    footer { text-align: center; padding: 40px; color: white; font-weight: bold; }
+    .obra-item h3 {
+      padding: 10px;
+      text-align: center;
+      font-size: 1em;
+      color: var(--azul-escuro);
+    }
 
     .btn-contato {
       display: inline-block;
@@ -107,33 +116,50 @@
       margin-top: 20px;
       transition: 0.3s;
     }
-    .btn-contato:hover { transform: scale(1.05); background: #128c7e; }
+
+    .btn-contato:hover {
+      transform: scale(1.05);
+      background: #128c7e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: white;
+      font-weight: bold;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <img src="img/logo-fg.png" alt="FG Construtora" class="logo-img">
-  <img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png" class="engenheiro-ilustracao" alt="Engenharia">
   <h1>FG Construtora</h1>
   <p>Rapidez e Atenção aos Mínimos Detalhes</p>
 </header>
 
 <div class="container">
   <div class="card-principal">
+
     <h2>Nossa História</h2>
     <div class="texto-historia">
-      <p>Fundada em <strong>2021</strong>, a FG Construtora é especialista na execução de <strong>obras de arte pré-moldadas</strong>.</p>
-      <p>Nosso foco principal são <strong>pontes e viadutos</strong>, onde aplicamos agilidade máxima e rigor técnico para entregar estruturas seguras e duráveis em tempo recorde.</p>
+      <p>
+        Fundada em <strong>2021</strong>, a FG Construtora é especialista na execução de
+        <strong>obras de arte pré-moldadas</strong>.
+      </p>
+      <p>
+        Nosso foco principal são <strong>pontes e viadutos</strong>,
+        aplicando rigor técnico, agilidade e segurança estrutural.
+      </p>
     </div>
 
     <div class="mapa-container">
-      <iframe 
-        src="https://www.google.com/maps/d/embed?mid=1vXf_p_K_pYV8VvNqYt1Z2V8Gk9O8x7w" 
-        width="100%" 
-        height="480" 
-        style="border:0;" 
-        allowfullscreen="" 
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1vXf_p_K_pYV8VvNqYt1Z2V8Gk9O8x7w"
+        width="100%"
+        height="480"
+        style="border:0;"
         loading="lazy">
       </iframe>
     </div>
@@ -144,24 +170,29 @@
         <img src="img/ponte-tunas.jpeg" alt="Ponte Tunas">
         <h3>Ponte – Tunas</h3>
       </div>
+
       <div class="obra-item">
         <img src="img/ponte-gramado-xavier.jpeg" alt="Ponte Gramado Xavier">
         <h3>Ponte – Gramado Xavier</h3>
       </div>
+
       <div class="obra-item">
         <img src="img/ponte-embrapa.jpeg" alt="Ponte Embrapa">
         <h3>Ponte – Embrapa</h3>
       </div>
     </div>
 
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="https://wa.me/555491868447" class="btn-contato">ENVIAR PROJETO VIA WHATSAPP</a>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="https://wa.me/555491868447" class="btn-contato">
+        ENVIAR PROJETO VIA WHATSAPP
+      </a>
     </div>
+
   </div>
 </div>
 
 <footer>
-  FG Construtora LTDA - Rio Grande do Sul © 2026
+  FG Construtora LTDA – Rio Grande do Sul © 2026
 </footer>
 
 </body>
