@@ -3,133 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FG Construtora | Pontes & Viadutos</title>
+  <title>FG Construtora | Engenharia, Rapidez e Agilidade</title>
 
   <style>
     :root {
       --azul-logo: #3a7caf;
-      --azul-escuro: #0f172a;
+      --azul-forte: #020617;
       --branco: #ffffff;
-      --cinza: #f8fafc;
-      --sombra: 0 4px 20px rgba(0,0,0,0.3);
+      --cinza-claro: #f1f5f9;
+      --sombra: 0 4px 20px rgba(0,0,0,0.1);
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: var(--azul-escuro);
-      color: var(--cinza);
+      /* Fundo solicitado: Branco que muda para Azul Forte */
+      background: linear-gradient(180deg, var(--branco) 0%, var(--cinza-claro) 30%, #1e293b 70%, var(--azul-forte) 100%);
+      background-attachment: fixed;
+      color: #334155;
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #1e293b, #020617);
       text-align: center;
-      padding: 50px 20px;
-      border-bottom: 4px solid var(--azul-logo);
-      box-shadow: var(--sombra);
+      padding: 60px 20px;
     }
 
     header img {
-      height: 120px;
-      margin-bottom: 20px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    /* Ícone de Capacete solicitado */
+    .helmet-icon {
+      font-size: 50px;
+      color: var(--azul-logo);
+      margin-bottom: 15px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 36px;
-      color: var(--branco);
-    }
-
-    header p {
-      font-size: 18px;
-      color: #cbd5f5;
+      font-size: 38px;
+      color: var(--azul-forte);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     section {
-      padding: 80px 20px;
-      max-width: 1200px;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para o texto */
+      border-radius: 20px;
+      box-shadow: var(--sombra);
+      margin-bottom: 40px;
+    }
+
+    .historia-content {
+      text-align: center;
+      max-width: 800px;
       margin: auto;
     }
 
     h2 {
-      text-align: center;
       color: var(--azul-logo);
-      font-size: 32px;
-      margin-bottom: 50px;
-      letter-spacing: 2px;
+      font-size: 28px;
+      margin-bottom: 30px;
       text-transform: uppercase;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+    /* Destaques de Agilidade */
+    .destaques-fg {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+      gap: 20px;
     }
 
-    .card {
-      background-color: #1e293b;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: var(--sombra);
-      border-left: 5px solid var(--azul-logo);
+    .destaque-item {
+      flex: 1;
+      min-width: 200px;
+      padding: 20px;
+      background: var(--branco);
+      border-radius: 10px;
+      border-top: 4px solid var(--azul-logo);
+    }
+
+    /* Portfólio Discreto (Menor foco) */
+    .portfolio-mini {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .portfolio-mini img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      filter: grayscale(30%);
       transition: 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
+    .portfolio-mini img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.05);
     }
 
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 25px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: var(--azul-logo);
-    }
-
-    .cta {
-      background-color: var(--azul-logo);
+    .mapa-container {
+      margin-top: 40px;
       text-align: center;
-      padding: 60px 20px;
-      border-radius: 20px;
-      margin: 40px auto;
-      box-shadow: var(--sombra);
-    }
-
-    .cta h2 {
-      color: white;
-    }
-
-    .cta a {
-      background-color: white;
-      color: var(--azul-logo);
-      padding: 16px 40px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-    }
-
-    .cta a:hover {
-      background-color: #020617;
-      color: white;
+      padding: 20px;
+      background: #e2e8f0;
+      border-radius: 15px;
     }
 
     footer {
-      background-color: #020617;
       padding: 40px;
       text-align: center;
-      color: #94a3b8;
+      color: var(--branco);
       font-size: 14px;
+    }
+
+    .btn-whatsapp {
+      background-color: var(--azul-logo);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -138,53 +144,61 @@
 
 <header>
   <img src="img/logo-fg.png" alt="Logo FG Construtora">
-  <h1>Pontes & Viadutos</h1>
-  <p>Engenharia de precisão em obras civis e estruturas pré-moldadas</p>
+  <div class="helmet-icon">👷‍♂️</div>
+  <h1>Engenharia de Resultados</h1>
 </header>
 
 <section>
-  <h2>Portfólio de Obras</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="img/ponte-tunas.jpeg" alt="Obra em Tunas">
-      <div class="card-content">
-        <h3>Ponte – tunas</h3>
-        <p>Obra executada com estrutura em concreto armado e alto padrão técnico.</p>
-      </div>
+  <div class="historia-content">
+    <h2>Nossa História</h2>
+    <p>
+      Fundada em <strong>2021</strong>, a <strong>FG Construtora</strong> nasceu com o propósito de inovar no setor de infraestrutura. 
+      Somos especialistas em <strong>obras de arte pré-moldadas</strong>, com foco absoluto em <strong>pontes e viadutos</strong>.
+    </p>
+    
+    <div class="destaques-fg">
+        <div class="destaque-item">
+            <strong>🚀 Rapidez</strong>
+            <p>Processos otimizados para cumprir cronogramas desafiadores.</p>
+        </div>
+        <div class="destaque-item">
+            <strong>⚡ Agilidade</strong>
+            <p>Logística e montagem eficiente de estruturas pesadas.</p>
+        </div>
+        <div class="destaque-item">
+            <strong>🔍 Detalhes</strong>
+            <p>Atenção aos mínimos detalhes que garantem a segurança e durabilidade.</p>
+        </div>
     </div>
 
-    <div class="card">
-      <img src="img/ponte-gramado-xavier.jpeg" alt="Obra em Gramado Xavier">
-      <div class="card-content">
-        <h3>Ponte – gramado xavier</h3>
-        <p>Montagem de vigas pré-moldadas com agilidade e segurança estrutural.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="img/ponte-embrapa.jpeg" alt="Obra Pelotas">
-      <div class="card-content">
-        <h3>Ponte – embrapa</h3>
-        <p>Execução de obra em parceria com a EMBRAPA – Terras Baixas.</p>
-      </div>
-    </div>
-
+    <p>
+      Nossa trajetória é marcada pela entrega de estruturas sólidas, onde a engenharia de precisão se une à agilidade executiva 
+      para transformar projetos em realidade em tempo recorde.
+    </p>
   </div>
 </section>
 
-<section class="cta">
-  <h2>Fale com nossos Engenheiros</h2>
-  <p>Transforme seu projeto em uma estrutura sólida e durável.</p>
-  <a href="https://wa.me/555491868447" target="_blank">ENVIAR PROJETO NO WHATSAPP</a>
-  <p style="margin-top:20px;">📧 fgconstrutora25@gmail.com</p>
+<section>
+  <h2 style="text-align: center;">Presença em Obras</h2>
+  <div class="portfolio-mini">
+    <img src="img/ponte-tunas.jpeg" alt="Obra Tunas">
+    <img src="img/ponte-gramado-xavier.jpeg" alt="Obra Gramado Xavier">
+    <img src="img/ponte-embrapa.jpeg" alt="Obra Pelotas">
+  </div>
+
+  <div class="mapa-container">
+    <h3>Mapa de Atuação</h3>
+    <p><i>Aguardando o envio do seu mapa de obras executadas e em execução...</i></p>
+    </div>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="https://wa.me/555491868447" class="btn-whatsapp" target="_blank">FALAR COM ENGENHARIA NO WHATSAPP</a>
+  </div>
 </section>
 
 <footer>
-  © 2026 FG Construtora LTDA • Obras Civis • Pré-Moldados
+  © 2026 FG Construtora LTDA • Fundada em 2021 • Especialistas em Pontes
 </footer>
 
 </body>
 </html>
-
