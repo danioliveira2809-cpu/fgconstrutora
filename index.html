@@ -4,47 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FG Construtora | Pontes & Viadutos</title>
+
   <style>
-    /* 1. PALETA DE CORES BASEADA NA LOGO */
     :root {
-      --azul-logo: #3a7caf; /* Tom extraído da sua logo */
-      --azul-escuro: #0f172a; /* Fundo do Power BI 2026 */
-      --branco-puro: #ffffff;
-      --cinza-claro: #f8fafc;
-      --sombra: 0 4px 20px rgba(0, 0, 0, 0.3);
+      --azul-logo: #3a7caf;
+      --azul-escuro: #0f172a;
+      --branco: #ffffff;
+      --cinza: #f8fafc;
+      --sombra: 0 4px 20px rgba(0,0,0,0.3);
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       background-color: var(--azul-escuro);
-      color: var(--cinza-claro);
+      color: var(--cinza);
       line-height: 1.6;
     }
 
-    /* 2. CABEÇALHO COM LINHA DE DESTAQUE */
     header {
-      background: linear-gradient(135deg, #1e293b 0%, #020617 100%);
-      padding: 50px 20px;
+      background: linear-gradient(135deg, #1e293b, #020617);
       text-align: center;
-      border-bottom: 4px solid var(--azul-logo); /* Linha de camada */
+      padding: 50px 20px;
+      border-bottom: 4px solid var(--azul-logo);
       box-shadow: var(--sombra);
     }
 
     header img {
       height: 120px;
       margin-bottom: 20px;
-      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
     }
 
     header h1 {
-      font-size: 36px;
       margin: 0;
-      color: var(--branco-puro);
-      letter-spacing: 1px;
+      font-size: 36px;
+      color: var(--branco);
     }
 
-    /* 3. SEÇÕES COM SOMBRAS E BORDAS */
+    header p {
+      font-size: 18px;
+      color: #cbd5f5;
+    }
+
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -56,8 +57,8 @@
       color: var(--azul-logo);
       font-size: 32px;
       margin-bottom: 50px;
-      text-transform: uppercase;
       letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .cards {
@@ -66,26 +67,23 @@
       gap: 30px;
     }
 
-    /* CAMADAS DE CARTÕES COM SOMBRA E BORDA LATERAL */
     .card {
       background-color: #1e293b;
       border-radius: 15px;
       overflow: hidden;
       box-shadow: var(--sombra);
-      transition: all 0.4s ease;
-      border-left: 5px solid var(--azul-logo); /* Linha de detalhe */
+      border-left: 5px solid var(--azul-logo);
+      transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(58, 124, 175, 0.4);
+      transform: translateY(-8px);
     }
 
     .card img {
       width: 100%;
       height: 220px;
       object-fit: cover;
-      display: block;
     }
 
     .card-content {
@@ -93,112 +91,100 @@
     }
 
     .card h3 {
-      color: var(--azul-logo);
       margin-top: 0;
+      color: var(--azul-logo);
     }
 
-    /* 4. ÁREA DE CHAMADA (CTA) */
     .cta {
       background-color: var(--azul-logo);
-      color: white;
       text-align: center;
+      padding: 60px 20px;
       border-radius: 20px;
       margin: 40px auto;
       box-shadow: var(--sombra);
     }
 
-    .cta h2 { color: white; }
+    .cta h2 {
+      color: white;
+    }
 
     .cta a {
-      background-color: var(--branco-puro);
+      background-color: white;
       color: var(--azul-logo);
-      padding: 18px 40px;
-      text-decoration: none;
-      font-weight: bold;
+      padding: 16px 40px;
       border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
       display: inline-block;
-      transition: 0.3s;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-top: 20px;
     }
 
     .cta a:hover {
-      background-color: var(--azul-escuro);
+      background-color: #020617;
       color: white;
-      transform: scale(1.05);
     }
 
     footer {
       background-color: #020617;
-      text-align: center;
       padding: 40px;
-      border-top: 1px solid #334155;
+      text-align: center;
       color: #94a3b8;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <img src="logo-fg.png" alt="Logo FG Construtora">
-    <h1>PONTES & VIADUTOS</h1>
-    <p>Engenharia de precisão em obras civis e estruturas pré-moldadas.</p>
-  </header>
+<header>
+  <img src="obras-img/logo-fg.png" alt="Logo FG Construtora">
+  <h1>Pontes & Viadutos</h1>
+  <p>Engenharia de precisão em obras civis e estruturas pré-moldadas</p>
+</header>
 
-  <section id="portfolio">
-    <h2>Portfólio de Obras</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="ponte-finalizada.jpg" alt="Ponte Sinimbu">
-        <div class="card-content">
-          <h3>Ponte do Rio Sinimbu</h3>
-          <p>Projeto executado com infraestrutura completa e acabamento de alto padrão técnico.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="ponte-obra.jpg" alt="Ponte Gramado Xavier">
-        <div class="card-content">
-          <h3>Ponte Gramado Xavier</h3>
-          <p>Montagem técnica de vigas pré-moldadas garantindo rapidez e segurança estrutural.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="detalhe-vigas.jpg" alt="Estruturas">
-        <div class="card-content">
-          <h3>Pré-Moldados</h3>
-          <p>Fabricação e montagem de elementos em concreto armado para grandes vãos.</p>
-        </div>
+<section>
+  <h2>Portfólio de Obras</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="obras-img/ponte-tunas.jpg" alt="Ponte Tunas">
+      <div class="card-content">
+        <h3>Ponte – Tunas</h3>
+        <p>Obra executada com estrutura em concreto armado e alto padrão técnico.</p>
       </div>
     </div>
-  </section>
 
-  <section id="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="card-content">
-          <h3>Obras Civis</h3>
-          <p>Gestão completa de canteiros para obras industriais e infraestrutura urbana.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <h3>Reformas e Ampliações</h3>
-          <p>Planejamento para modernização de estruturas existentes com mínima interferência.</p>
-        </div>
+    <div class="card">
+      <img src="obras-img/ponte-gramado-xavier.jpg" alt="Ponte Gramado Xavier">
+      <div class="card-content">
+        <h3>Ponte – Gramado Xavier</h3>
+        <p>Montagem de vigas pré-moldadas com agilidade e segurança estrutural.</p>
       </div>
     </div>
-  </section>
 
-  <section class="cta">
-    <h2>Fale com nossos Engenheiros</h2>
-    <p>Transforme seu projeto em uma estrutura sólida e duradoura.</p>
-    <a href="https://wa.me/555491868447" target="_blank">ENVIAR PROJETO NO WHATSAPP</a>
-    <p style="margin-top:20px;">📧 fgconstrutora25@gmail.com</p>
-  </section>
+    <div class="card">
+      <img src="obras-img/ponte-embrapa.jpg" alt="Ponte EMBRAPA">
+      <div class="card-content">
+        <h3>Ponte – EMBRAPA</h3>
+        <p>Execução de obra em parceria com a EMBRAPA – Terras Baixas.</p>
+      </div>
+    </div>
 
-  <footer>
-    <p>© 2026 FG Construtora LTDA • Pontes & Viadutos</p>
-  </footer>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Fale com nossos Engenheiros</h2>
+  <p>Transforme seu projeto em uma estrutura sólida e durável.</p>
+  <a href="https://wa.me/555491868447" target="_blank">ENVIAR PROJETO NO WHATSAPP</a>
+  <p style="margin-top:20px;">📧 fgconstrutora25@gmail.com</p>
+</section>
+
+<footer>
+  © 2026 FG Construtora LTDA • Obras Civis • Pré-Moldados
+</footer>
 
 </body>
 </html>
+
