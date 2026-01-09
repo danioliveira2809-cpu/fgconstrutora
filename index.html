@@ -28,14 +28,18 @@
 
     .logo-img { height: 90px; margin-bottom: 15px; }
     
-    /* CORREÇÃO: Desenho profissional do engenheiro */
-    .engenheiro-ilustracao {
-      width: 140px;
-      height: auto;
+    .logo-principal { height: 100px; margin-bottom: 20px; }
+
+    /* Imagem do Engenheiro (Pessoa Profissional) */
+    .engenheiro-topo {
+      width: 180px;
+      height: 180px;
       margin: 0 auto 20px;
       display: block;
-      filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
-      border-radius: 50%; /* Mantém o foco circular se for um avatar */
+      border-radius: 50%;
+      border: 5px solid var(--azul-fg);
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     .container { max-width: 1000px; margin: auto; padding: 20px; }
