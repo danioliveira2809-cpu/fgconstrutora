@@ -1,95 +1,199 @@
-import { MapPin, Calendar } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FG Construtora | Engenharia de Obras de Arte</title>
 
-interface Work {
-  id: number;
-  title: string;
-  location: string;
-  year: string;
-  image: string;
-  description: string;
-}
+  <style>
+    :root {
+      --azul-fg: #3a7caf;
+      --azul-escuro: #0a192f;
+      --branco: #ffffff;
+    }
 
-const works: Work[] = [
-  {
-    id: 1,
-    title: 'Ponte - Tunas',
-    location: 'Rio Grande do Sul',
-    year: '2023',
-    image: '/images/obra-capacete-azul-3.jpg',
-    description: 'Obra de arte em concreto protendido',
-  },
-  {
-    id: 2,
-    title: 'Ponte - Gramado Xavier',
-    location: 'Rio Grande do Sul',
-    year: '2023',
-    image: '/images/obra-capacete-azul-1.jpg',
-    description: 'Estrutura pré-moldada de alta performance',
-  },
-  {
-    id: 3,
-    title: 'Ponte - Embrapa',
-    location: 'Rio Grande do Sul',
-    year: '2023',
-    image: '/images/ponte-embrapa.jpeg',
-    description: 'Concreto armado com acabamento de excelência',
-  },
-];
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(
+        180deg,
+        var(--branco) 0%,
+        #eef2f3 50%,
+        var(--azul-fg) 100%
+      );
+      background-attachment: fixed;
+      color: #333;
+    }
 
-export default function Works() {
-  return (
-    <section id="obras" className="py-20 bg-muted border-t-4 border-primary">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-center">
-            Obras em Destaque
-          </h2>
-          <p className="text-lg text-secondary max-w-2xl mx-auto">
-            Conheça alguns dos nossos projetos mais significativos em engenharia de estruturas
-          </p>
-        </div>
+    /* HEADER CORRIGIDO */
+    header {
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-        {/* Grid de Obras */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {works.map((work) => (
-            <div
-              key={work.id}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover:translate-y-2 border-l-4 border-primary"
-            >
-              {/* Imagem */}
-              <div className="h-64 overflow-hidden bg-gray-200">
-                <img
-                  src={work.image}
-                  alt={work.title}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  onError={(e) => {
-                    e.currentTarget.src = '/images/obra-capacete-azul-2.jpg';
-                  }}
-                />
-              </div>
+    .logo-img {
+      height: 90px;
+      margin-bottom: 15px;
+    }
 
-              {/* Conteúdo */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-2">{work.title}</h3>
-                <p className="text-secondary text-sm mb-4">{work.description}</p>
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
 
-                {/* Metadados */}
-                <div className="space-y-2 pt-4 border-t border-border">
-                  <div className="flex items-center gap-2 text-secondary text-sm">
-                    <MapPin size={16} className="text-primary" />
-                    <span>{work.location}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-secondary text-sm">
-                    <Calendar size={16} className="text-primary" />
-                    <span>{work.year}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    .card-principal {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      margin-top: -40px;
+    }
+
+    h1, h2 {
+      color: var(--azul-escuro);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .texto-historia {
+      line-height: 1.8;
+      font-size: 1.1em;
+      text-align: center;
+      color: #555;
+    }
+
+    .mapa-container {
+      margin: 40px 0;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 3px solid var(--azul-fg);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+    }
+
+    .mapa-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(58,124,175,0.3);
+    }
+
+    .grid-obras {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .obra-item {
+      background: #f8fafc;
+      border-radius: 10px;
+      overflow: hidden;
+      border-bottom: 4px solid var(--azul-fg);
+    }
+
+    .obra-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .obra-item h3 {
+      padding: 10px;
+      text-align: center;
+      font-size: 1em;
+      color: var(--azul-escuro);
+    }
+
+    .btn-contato {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .btn-contato:hover {
+      transform: scale(1.05);
+      background: #128c7e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="img/logo-fg.png" alt="FG Construtora" class="logo-img">
+  <h1>FG Construtora</h1>
+  <p>Rapidez e Atenção aos Mínimos Detalhes</p>
+</header>
+
+<div class="container">
+  <div class="card-principal">
+
+    <h2>Nossa História</h2>
+    <div class="texto-historia">
+      <p>
+        Fundada em <strong>2021</strong>, a FG Construtora é especialista na execução de
+        <strong>obras de arte pré-moldadas</strong>.
+      </p>
+      <p>
+        Nosso foco principal são <strong>pontes e viadutos</strong>,
+        aplicando rigor técnico, agilidade e segurança estrutural.
+      </p>
+    </div>
+<div class="mapa-container">
+    <iframe 
+        src="https://www.google.com/maps/d/u/0/embed?mid=15vE1CACL8WVAii_N5k0i2bcEW-S6Gts&ehbc=2E312F" 
+        width="100%" 
+        height="480" 
+        style="border:0;" 
+        loading="lazy">
+    </iframe>
+</div>
+
+    <h2>Obras em Destaque</h2>
+    <div class="grid-obras">
+      <div class="obra-item">
+        <img src="img/ponte-tunas.jpeg" alt="Ponte Tunas">
+        <h3>Ponte – Tunas</h3>
       </div>
-    </section>
-  );
-}
+
+      <div class="obra-item">
+        <img src="img/ponte-gramado-xavier.jpeg" alt="Ponte Gramado Xavier">
+        <h3>Ponte – Gramado Xavier</h3>
+      </div>
+
+      <div class="obra-item">
+        <img src="img/ponte-embrapa.jpeg" alt="Ponte Embrapa">
+        <h3>Ponte – Embrapa</h3>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <a href="https://wa.me/555491868447" class="btn-contato">
+        PEÇA SEU ORÇAMENTO DIRETO NO WHATSAPP 
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  FG Construtora LTDA – Rio Grande do Sul © 2026
+</footer>
+
+</body>
+</html>
 
